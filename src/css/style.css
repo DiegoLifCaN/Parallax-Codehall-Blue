@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*  */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(img/background1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: auto;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo {
+  font-size: x-large;
+  color: white;
+  user-select: none;
+}
+
+.navigation a {
+  position: relative;
+  font-size: large;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  bottom: -6px;
+  background: white;
+  width: 115%;
+  height: 3px;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.8s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: larger;
+  color: white;
+  font-weight: 500;
+  margin-left: 50px;
+  transition: 0.8s;
+}
+
+.navigation .btnLogin-popup:hover {
+  background: #162938;
+  color: #ffffff;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* transform: scale(0); */
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper .form-box {
+  width: 100%;
+}
+
+/* Mobile */
+
+/* @media (max-width: 700px) {
+  header{
+    background-color: green;
+    padding: 1% 1%;
+  }
+
+} */
